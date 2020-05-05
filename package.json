@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
-	  "name": "Emanuele Viglianisi",
-	  "email": "emavgl@gmail.com",
-	  "portfolio": "http://emavgl.github.io"
+    "name": "Emanuele Viglianisi",
+    "email": "emavgl@gmail.com",
+    "portfolio": "http://emavgl.github.io"
   },
   "license": "ISC",
   "repository": "https://github.com/emavgl/bingwall-js.git",

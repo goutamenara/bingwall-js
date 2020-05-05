@@ -100,6 +100,18 @@ var getDownloadedPictures = function(dir){
 	return array;
 }
 
+var deletePictures = function(){
+	fs.readdir(directory, (err, files) => {
+		if (err) throw err;
+	  
+		for (const file of files) {
+		  fs.unlink(path.join(directory, file), err => {
+			if (err) throw err;
+		  });
+		}
+	});
+}
+
 program
   .version('0.0.1')
   .option('-s, --set', 'set as wallpaper (works on windows, gnome and mac)')
@@ -117,5 +129,6 @@ if (program.all) {
 	var downloadedPictures = getDownloadedPictures(directory);
 	downloadAllPictures(resolution);
 } else {
+	deletePictures()
 	downloadSinglePicture(url, resolution, program.set);
 }
